@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        input[type="checkbox"] {
+            vertical-align: sub;
+        }
+
+        select {
+            width: 200px;
+            height: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        label[for]{
+            min-width: 100px;
+            display: inline-block;
+        }
+
+        invoiceLabel{
+            width: 40px;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        button {
+            cursor: pointer;
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0;
+            border: 0;
+            background: none;
+            background-color: #3377d6;
+            font-size: 14px;
+            color: white;
+            box-shadow: none;
+            font-weight: normal;
+        }
+
+        button:hover {
+            background-color: #317ef3;
+            border-bottom: 1px solid #2868c8;
+            box-shadow: 1px 1px 1px #ccc;
+        }
+    </style>
+</head>
+
+<body style="width: 400px;">
+    <h3>查找运价：</h3>
+
+    <div>
+        <label for="flightNums">渠道：</label>
+        <select id="channel">
+            <option value="">--不限--</option>
+            <option value="1A-WS">1A-WS</option>
+            <option value="1B-WS">1B-WS</option>
+            <option value="3UD-WS">3UD-WS</option>
+            <option value="BZ-WS">BZ-WS</option>
+            <option value="CS-ES">CS-ES</option>
+            <option value="CS-WS">CS-WS</option>
+            <option value="CSD-WS">CSD-WS</option>
+            <option value="CW-ES">CW-ES</option>
+            <option value="CW-WS">CW-WS</option>
+            <option value="CZD-WS">CZD-WS</option>
+            <option value="GDS-WS">GDS-WS</option>
+            <option value="HX-WS">HX-WS</option>
+            <option value="IJ-WS">IJ-WS</option>
+            <option value="JS-WS">JS-WS</option>
+            <option value="KW-WS">KW-WS</option>
+            <option value="MUC-WS">MUC-WS</option>
+            <option value="MUT-WS">MUT-WS</option>
+            <option value="OD-WS">OD-WS</option>
+            <option value="TF-WS">TF-WS</option>
+            <option value="TS-WS">TS-WS</option>
+            <option value="ZHD-WS">ZHD-WS</option>
+            <option value="ZX-WS">ZX-WS</option>
+            <option value="ZY-WS">ZY-WS</option>
+        </select>
+    </div>
+
+    <div id="invoicetype">
+        <label for="flightNums">发票类型：</label>
+        <label class="invoiceLabel">
+            <input type="checkbox" name="E" id="E"> E&nbsp;&nbsp;&nbsp;
+        </label>
+        <label class="invoiceLabel">
+            <input type="checkbox" name="F" id="F"> F&nbsp;&nbsp;&nbsp;
+        </label>
+        <label class="invoiceLabel">
+            <input type="checkbox" name="T" id="T"> T&nbsp;&nbsp;&nbsp;
+        </label>
+    </div>
+    <br>
+
+    <button id="find">查找</button>
+    <span id="msg" style="color: #FF5722;font-size: 14px;"></span>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
